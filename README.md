@@ -147,6 +147,6 @@ Error: Ciudad no encontrada (Código: 404)
 ```
 ---
 
-### **Conclusión**  
-Este ejercicio me ayudó a reforzar el uso de promesas para manejar **operaciones asíncronas**, como consultar una base de datos. También me permitió practicar cómo **estructurar objetos de respuesta y error** en un formato claro y manejable. 🚀
+# **Conclusión**  
+Este ejercicio me ayudó a reforzar el uso de promesas para manejar **operaciones asíncronas**, como consultar una base de datos. También me permitió practicar cómo **estructurar objetos de respuesta y error** en un formato claro y manejable. 
 

@@ -37,3 +37,43 @@ Este ejercicio me ayudó a reforzar el uso de promesas y su manejo con `.then()`
 
 
 
+
+
+## **ejercicio 4**
+
+Para resolver este ejercicio, pensé en cómo funcionan las promesas y en cómo simular un proceso de pago en línea, que normalmente toma unos segundos en completarse.  
+
+### **Paso 1: Creación de la Promesa**  
+La función `ProcesarPago(monto)` devuelve una **nueva promesa**. Dentro de esta promesa, incluí un `setTimeout` para simular el tiempo de procesamiento del pago (3 segundos). Esto imita el tiempo real que un sistema de pago podría tardar en validar una transacción.  
+
+También agregué un `console.log("entro")` al inicio de la función para verificar que la función se ejecuta correctamente.  
+
+### **Paso 2: Evaluación de la Condición**  
+Dentro del `setTimeout`, agregué una condición `if` para verificar el monto del pago:  
+- Si el **monto es mayor a 0**, la promesa se **resuelve** con el mensaje `"Pago exitoso de $monto"`.  
+- Si el **monto es 0 o menor**, la promesa se **rechaza** con el mensaje `"Error: Monto inválido"`.  
+
+### **Paso 3: Manejo de la Promesa**  
+Al llamar `ProcesarPago(4)`, usé `.then()` y `.catch()` para manejar la respuesta:  
+- `.then(mensaje => console.log(mensaje))` imprime `"Pago exitoso de $monto"` si el pago es válido.  
+- `.catch(error => console.log(error))` imprime `"Error: Monto inválido"` si el monto es 0 o menor.  
+
+### **Error en el Código Original**
+Me di cuenta de que en `resolve("Pago exitoso de $monto")` el valor de `monto` no se estaba interpolando correctamente en la cadena de texto. Para solucionarlo, lo corregí con **template literals**:
+```js
+resolve(`Pago exitoso de $${monto}`);
+```
+
+### **Resultado Final**
+Si ejecutamos `ProcesarPago(4)`, después de 3 segundos, se muestra en consola:  
+```
+entro  
+Pago exitoso de $4  
+```
+Si en su lugar ejecutamos `ProcesarPago(0)`, el resultado sería:  
+```
+entro  
+Error: Monto inválido  
+```
+Este ejercicio me permitió reforzar el uso de promesas y cómo utilizarlas en situaciones del mundo real, como el procesamiento de pagos en línea. También aprendí a usar `setTimeout` para simular retrasos y a corregir errores en la interpolación de cadenas. 🚀
+

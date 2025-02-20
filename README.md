@@ -39,7 +39,7 @@ Este ejercicio me ayudó a reforzar el uso de promesas y su manejo con `.then()`
 
 
 
-## **ejercicio 4**
+## **ejercicio 4.-**
 
 Para resolver este ejercicio, pensé en cómo funcionan las promesas y en cómo simular un proceso de pago en línea, que normalmente toma unos segundos en completarse.  
 

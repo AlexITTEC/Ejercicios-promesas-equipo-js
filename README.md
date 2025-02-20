@@ -2,7 +2,7 @@
 repositorio de ejercicios de promesas de JavaScript
 
 
-**ejercico 1.-**
+## **ejercico 1.-**
 Para resolver este ejercicio, pensé en cómo funcionan las promesas en JavaScript y cómo se pueden utilizar para simular una operación asíncrona, como la descarga de un archivo.  
 
 ### **Paso 1: Creación de la Promesa**

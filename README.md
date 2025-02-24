@@ -44,6 +44,20 @@ Crea una función verificarEdad(edad) que devuelva una promesa.
 - Si la edad es 18 o más, la promesa se resuelve con "Compra permitida".
 - Si la edad es menor de 18, la promesa se rechaza con "Debes ser mayor de edad para comprar este producto".
 ### **Solución:**
+En este ejercicio, se crea una función que devuelve una promesa que simula un proceso de verificación de edad. La función utiliza setTimeout para simular un retraso, similar al tiempo de respuesta de un servidor.
+
+Paso 1: Creación de la Promesa
+La promesa se crea dentro de la función verificarEdad(). Si la edad es 18 o mayor, la promesa se resuelve con "Compra permitida". Si la edad es menor de 18, la promesa se rechaza con un mensaje indicando que la compra no está permitida.
+
+Paso 2: Simulación de Tiempo
+setTimeout se usa para simular un proceso asíncrono de 3 segundos, que es el tiempo que tomaría recibir una respuesta del servidor.
+
+Paso 3: Manejo de la Promesa
+Se ejecutan dos llamadas a la función verificarEdad(), una con 19 años (mayoría de edad) y otra con 12 años (menor de edad). Usamos .then() y .catch() para manejar el resultado de la promesa. Si la promesa se resuelve correctamente, muestra el mensaje "Compra permitida". Si es rechazada, muestra el mensaje de error correspondiente.
+
+Resultado Final:
+Cuando se ejecuta con una edad de 19, la promesa se resuelve y se muestra "Compra permitida".
+Con 12 años, la promesa se rechaza y muestra "Debes ser mayor de edad para comprar este producto".
 
 ## **Ejercicio 3**
 ### **Instrucción:**
@@ -107,7 +121,22 @@ Crea una función autenticarUsuario(usuario, contraseña) que devuelva una prome
 - Si el usuario es "admin" y la contraseña es "1234", la promesa se resuelve con un objeto que contiene { usuario, rol: "Administrador", mensaje: "Inicio de sesión exitoso" }.
 - Si los datos son incorrectos, la promesa se rechaza con un objeto { error: "Credenciales incorrectas", codigo: 401 }.
 ### **Solución:**
+En este ejercicio, se crea una función que simula la autenticación de un usuario. Utilizamos una promesa para manejar el éxito y el fracaso de la autenticación.
 
+Paso 1: Creación de la Promesa
+La función autenticarUsuario() devuelve una promesa. En el bloque de la promesa, usamos setTimeout para simular un tiempo de respuesta de 2 segundos, como si fuera la respuesta de un servidor.
+
+Paso 2: Evaluación de Credenciales
+Dentro de setTimeout, verificamos si el nombre de usuario es "admin" y la contraseña es "1234".
+
+Si las credenciales son correctas, la promesa se resuelve con un objeto que contiene los datos del usuario, el rol y un mensaje de éxito.
+Si las credenciales son incorrectas, la promesa se rechaza con un objeto que tiene un error y un código 401.
+Paso 3: Manejo de la Promesa
+Al ejecutar autenticarUsuario(), usamos .then() para manejar el resultado exitoso, donde se muestra el objeto con los detalles del usuario. Si la promesa es rechazada, usamos .catch() para mostrar el mensaje de error con el código 401.
+
+Resultado Final:
+Si las credenciales son correctas, como al ejecutar autenticarUsuario("admin", "1234"), la promesa se resuelve y muestra el objeto con los detalles del usuario.
+Si las credenciales son incorrectas, como al intentar con otro usuario o contraseña, la promesa se rechaza y muestra el mensaje de error con el código 401.
 
 ## **Ejercicio 6**
 ### **Instrucción:**
